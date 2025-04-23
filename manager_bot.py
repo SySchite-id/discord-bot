@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands
 
+with open("secret_token", "r") as file:
+    token = file.read().strip()
+
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -22,4 +25,4 @@ async def valo(ctx):
 async def repo(ctx):
     await ctx.send(file=discord.File("media/audio/hud-bang.mp3"))
 
-bot.run("MTM2NDQ3MDg2MDg4MjExNjYyOA.Gd9RWo.U9eTEvt9YBUW9pcBOUpFhP6MgVTmGk4VF_tUeU")
+bot.run(token)
