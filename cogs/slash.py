@@ -25,7 +25,7 @@ class Slash(commands.Cog):
     @discord.slash_command(name="ping", description="Check latency")
     async def ping(self, ctx=discord.ApplicationContext):
         latency = round(self.bot.latency * 1000)
-        await ctx.respond(f"Handshake Complete! {latency}ms")
+        await ctx.respond(f"Handshake Success! {latency}ms")
 
 #IMPORTANT!
 #Add these to call the cog
